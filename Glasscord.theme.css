@@ -1,4 +1,4 @@
-@import url("https://nmwplays.github.io/Glasscord/Glasscord.css");
+@import url("https://raw.githubusercontent.com/Rakise/Glasscord/refs/heads/main/Glasscord.css");
 
 /**
  * @name Glasscord
@@ -26,5 +26,66 @@
     --blur-strength: 7px;
     --brightness-level: 0.8;
 
-    --background-image: url('https://i.imgur.com/hpHXrym.png');
+    --background-image: url('https://raw.githubusercontent.com/Rakise/Glasscord/refs/heads/main/discord-wallpaper-dark-1980x1080.png');
+
+    /* Personal Glasscord tuning. */
+    --glass-shadow:
+        inset 1px 1px 4px rgba(255, 255, 255, 0.18),
+        inset -1px -1px 6px rgba(0, 0, 0, 0.14),
+        0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+/* Keep the channel/chat window darker than the rest of the glass UI. */
+.chat_f75fb0,
+.chatContent_f75fb0,
+.messagesWrapper__36d07,
+[class*="chatContent"],
+[class*="messagesWrapper"] {
+    background: rgba(12, 15, 21, 0.30) !important;
+    -webkit-backdrop-filter: blur(9px) brightness(0.72) saturate(115%) !important;
+    backdrop-filter: blur(9px) brightness(0.72) saturate(115%) !important;
+}
+
+.channelTextArea_f75fb0,
+.channelTextArea__74017,
+[class*="channelTextArea"] {
+    background: rgba(19, 23, 31, 0.42) !important;
+    border: 1px solid rgba(220, 228, 240, 0.12) !important;
+    border-radius: 16px !important;
+}
+
+/* Restore colored embed surfaces while keeping the Glasscord treatment. */
+.embedFull__623de,
+[class*="embedFull"],
+[class*="embedWrapper"],
+[class*="embedCard"] {
+    background: linear-gradient(
+        135deg,
+        rgba(74, 105, 155, 0.34),
+        rgba(27, 34, 49, 0.38)
+    ) !important;
+    border-top: 1px solid rgba(218, 228, 244, 0.16) !important;
+    border-right: 1px solid rgba(218, 228, 244, 0.12) !important;
+    border-bottom: 1px solid rgba(218, 228, 244, 0.12) !important;
+    border-left: 3px solid rgba(116, 163, 224, 0.72) !important;
+    border-radius: 14px !important;
+    box-shadow: var(--glass-shadow) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
+    backdrop-filter: blur(10px) saturate(125%) !important;
+}
+
+[class*="embedFull"] [class*="embedTitle"],
+[class*="embedWrapper"] [class*="embedTitle"],
+[class*="embedFull"] [class*="embedDescription"],
+[class*="embedWrapper"] [class*="embedDescription"],
+[class*="embedFull"] [class*="embedField"],
+[class*="embedWrapper"] [class*="embedField"] {
+    color: #edf2f8 !important;
+}
+
+[class*="embedFull"] [class*="embedFooter"],
+[class*="embedWrapper"] [class*="embedFooter"],
+[class*="embedFull"] [class*="embedTimestamp"],
+[class*="embedWrapper"] [class*="embedTimestamp"] {
+    color: rgba(218, 226, 238, 0.74) !important;
 }
