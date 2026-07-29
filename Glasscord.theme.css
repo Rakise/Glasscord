@@ -35,24 +35,6 @@
         0 4px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* Keep the channel/chat window darker than the rest of the glass UI. */
-.chat_f75fb0,
-.chatContent_f75fb0,
-.messagesWrapper__36d07,
-[class*="chatContent"],
-[class*="messagesWrapper"] {
-    background: rgba(12, 15, 21, 0.30) !important;
-    -webkit-backdrop-filter: blur(9px) brightness(0.72) saturate(115%) !important;
-    backdrop-filter: blur(9px) brightness(0.72) saturate(115%) !important;
-}
-
-.channelTextArea_f75fb0,
-.channelTextArea__74017,
-[class*="channelTextArea"] {
-    background: rgba(19, 23, 31, 0.42) !important;
-    border: 1px solid rgba(220, 228, 240, 0.12) !important;
-    border-radius: 16px !important;
-}
 
 /* Restore colored embed surfaces while keeping the Glasscord treatment. */
 .embedFull__623de,
